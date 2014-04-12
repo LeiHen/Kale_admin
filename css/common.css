@@ -86,7 +86,7 @@ input.loginHint{
     -mo-background-color: rgba(255,255,255,0.5);
     background-color:rgba(255,255,255,0.5);
     text-align: center;
-    
+    behavior: url(../js/PIE/PIE.htc); 
 }
 input.submintInput{
     background-image: url(../images/bg-loginBtn.png);
@@ -122,6 +122,8 @@ input.submintInput:hover{
 }
 
 /*列表页*/
+
+/*背景*/
 .adminListBg{
     background:url(../images/bg-index.jpg) no-repeat center top;
     background-size:cover;
@@ -135,6 +137,7 @@ input.submintInput:hover{
     bottom: 0;
 }
 
+/*头部*/
 .header{
     background:url(../images/bg-title.png) no-repeat 0 0;
     height: 98px;
@@ -147,14 +150,112 @@ input.submintInput:hover{
 .header_r p{
     background:url(../images/bg-title.png) repeat-x 0 -100px;
     height: 98px;
-    
+    min-width: 320px;
     text-align: center;
     font-size: 4.2em;
     color: #fff;
 /*    line-height: 2.1em;*/
     line-height: 96px;
+/*    line-height: 9.6em;*/
     -webkit-text-shadow: 0em -0.02em 0em #000000;
-    text-shadow: 0em -0.02em 0em #000000;
-    
+    text-shadow: 0em -0.02em 0em #000000;   
 }
 
+/*内容*/
+.content{
+/*    min-width: 1000px;*/
+/*    max-width: 1440px;*/
+    width: 1000px;
+    margin: 0px auto;
+}
+/*添加按钮*/
+div.add_btn{
+    -webkit-border-radius: 6px;
+    -mo-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    border-radius: 6px;
+    behavior: url(../js/PIE/PIE.htc);
+    background-color: #15ae6b;
+    color: #fff;
+    text-align: center;
+    line-height: 2.1428571em;/* 2.8em/60 */
+    width: 180px;
+    height: 60px;
+/*    margin: 30px 0px 20px 0px;*/
+    margin-top: 30px;
+    font-size: 2.8em;
+    transition: background-color 0.5s ease;
+}
+.add_btn:hover{
+    background-color: #129c60;
+    cursor: pointer;
+}
+
+/*内容列表*/
+.list{
+    margin-top: 18px;
+}
+.list li:last-child,{
+    -webkit-border-radius: 6px 6px 0px 0px;
+    -ms-border-radius: 6px 6px 0px 0px;
+    -mo-border-radius: 6px 6px 0px 0px;
+    -o-border-radius: 6px 6px 0px 0px;
+    border-radius: 6px 6px 0px 0px;
+    behavior: url(../js/PIE/PIE.htc);
+}
+.list li:first-child,{
+    -webkit-border-radius: 0px 0px 6px 6px;
+    -ms-border-radius: 0px 0px 6px 6px;
+    -mo-border-radius: 0px 0px 6px 6px;
+    -o-border-radius: 0px 0px 6px 6px;
+    border-radius: 0px 0px 6px 6px;
+    behavior: url(../js/PIE/PIE.htc);
+}
+
+.list .title{  
+    height: 50px;
+    background-color: #0074d2;
+    color: #fff;
+
+}
+.list samp{ 
+    font-family:Helvetica,Arial,"Microsoft YaHei","微软雅黑",STXihei,"华文细黑",SimSun,"宋体",sans-serif;
+    font-size: 1.6em;
+    display: inline-block;
+    float: left;
+    height: 100%;
+/*    line-height: 50px;*/
+    text-align: center;
+    line-height: 3.125em; /* 50px/1.6em*/
+}
+.list input{
+    border: 0;
+    background-color:transparent;
+/*    width:100%;*/
+}
+
+.list li samp:nth-child(1),.list samp.note{
+    width: 11%;
+}
+.list li samp:nth-child(2),.list samp.user{
+    width: 15%;
+}
+.list li samp:nth-child(3),.list samp.psd{
+    width: 15%;
+}
+.list li samp:nth-child(4),.list samp.ip{
+    width: 14%;
+}
+.list li samp:nth-child(5),.list samp.port{
+    width: 7%;
+}
+.list li samp:nth-child(6),.list samp.expiration_time{
+    width: 11%;
+}
+.list li samp:nth-child(7),.list samp.backups{
+    width: 7%;
+}
+.list li samp:nth-child(8),.list samp.operation{
+    width: 20%;
+}
