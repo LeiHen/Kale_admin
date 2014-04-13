@@ -122,10 +122,33 @@ function loginAjax(){
 }
 /* @end **/
 
+/**
+* @name		:
+* @author	:si
+* @relating	:jQuery
+* @dependent:
+*/
+function listEdit(el){
+    var pN=el.parentNode;
+//    consoleDebug(parent);
+//    pSN=get_previousSibling(pN);
+    var $pAll= $(pN).prevAll();
+    var $allInput =$pAll.children("input");
+    
+    console.log($allInput);
+    
+}
+/* @end **/
+
+
+
+
+
 
 /**
 * @name		:toTop
 * @author	:si
+* @relating	:jQuery
 * @dependent:返回顶部
 */
 function toTop(){   
@@ -162,7 +185,7 @@ function toTop(){
 * @version	:
 * @type		:基类
 * @explain	:
-* @relating	:
+* @relating	:jQuery
 * @dependent:
 */
 

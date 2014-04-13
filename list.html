@@ -19,10 +19,27 @@
         <div class="content">
             <div class="add_list">
                 <div class="add_btn icon-plus"></div>
+<!--
+                <div>
+                    <ul class="list">
+                        <li>
+                            <samp><input type="text" value="备注"  ></samp>
+                            <samp><input type="text" value="账号" ></samp>
+                            <samp><input type="text" value="密码" ></samp>
+                            <samp><input type="text" value="IP"  ></samp>
+                            <samp><input type="text" value="端口"  ></samp>
+                            <samp><input type="text" value="到期时间"  ></samp>
+                            <samp><input type="text" value="备份"  ></samp>
+                            <samp></samp>
+                        </li>         
+                    </ul>
+                    
+                </div>
+-->
             </div>
             
             <ul class="list">
-                <li class="title">
+                <li>
                     <samp>备注</samp>
                     <samp>账号</samp>
                     <samp>密码</samp>
@@ -32,6 +49,34 @@
                     <samp>备份</samp>
                     <samp>操作</samp>
                 </li>
+                <li >
+                    <samp><input type="text" value="刘强东" readonly="readonly" ></samp>
+                    <samp><input type="text" value="liuqiangdong" readonly="readonly" ></samp>
+                    <samp><input type="text" value="132456789" readonly="readonly" ></samp>
+                    <samp><input type="text" value="192.168.100.100" readonly="readonly" ></samp>
+                    <samp><input type="text" value="8000" readonly="readonly" ></samp>
+                    <samp><input type="text" value="1990-11-03" readonly="readonly" ></samp>
+                    <samp><input type="text" value="有" readonly="readonly" ></samp>
+                    <samp>
+                        <a class="icon-edit" title="编辑" onclick="listEdit(this)"></a>
+                        <a class="icon-stop"  href="#" title="停止"></a>
+                        <a class="icon-delete" href="#" title="删除"></a>
+                    </samp>
+                </li>
+                <li>
+                    <samp><input type="text" value="章泽天" readonly="readonly" ></samp>
+                    <samp><input type="text" value="zhangzetian" readonly="readonly" ></samp>
+                    <samp><input type="text" value="qweweqwe" readonly="readonly" ></samp>
+                    <samp><input type="text" value="192.168.100.110" readonly="readonly" ></samp>
+                    <samp><input type="text" value="8000" readonly="readonly" ></samp>
+                    <samp><input type="text" value="2015-11-03" readonly="readonly" ></samp>
+                    <samp><input type="text" value="无" readonly="readonly" class="not_backups" ></samp>
+                    <samp>
+                        <a class="icon-edit" href="#" title="编辑"></a>
+                        <a class="icon-stop"  href="#" title="停止"></a>
+                        <a class="icon-delete" href="#" title="删除"></a>
+                    </samp>
+                </li>
                 <li>
                     <samp><input type="text" value="刘强东" readonly="readonly" ></samp>
                     <samp><input type="text" value="liuqiangdong" readonly="readonly" ></samp>
@@ -40,16 +85,21 @@
                     <samp><input type="text" value="8000" readonly="readonly" ></samp>
                     <samp><input type="text" value="1990-11-03" readonly="readonly" ></samp>
                     <samp><input type="text" value="有" readonly="readonly" ></samp>
-                    <samp></samp>
+                    <samp>
+                        <a class="icon-edit" href="#" title="编辑"></a>
+                        <a class="icon-stop"  href="#" title="停止"></a>
+                        <a class="icon-delete" href="#" title="删除"></a>
+                    </samp>
                 </li>
-                <div class="clear"></div>
+                
             </ul>
-            
+            <div class="clear"></div>
         </div>
         
         
 <!--        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>-->
-        <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+<!--        <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>-->
+        <script src="js/jquery-1.9.1.min.js"></script>
 		<script src="js/base.js"></script>
 		<script src="js/common.js"></script>
 		<script type="text/javascript">	

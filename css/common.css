@@ -5,12 +5,20 @@ body{
 	font-family:Helvetica,Arial,"Microsoft YaHei","微软雅黑",STXihei,"华文细黑",SimSun,"宋体",sans-serif;
 	font-size:62.5%;
 }
-
+a{
+    text-decoration: none;
+    color: #fff;
+/*    font-size:62.5%;*/
+}
+a:link,a:visited,a:hover,a:ative{
+    
+}
 /*后台背景*/
 .adminLoginBg{
     background:url(../images/bg-amdin-1920x1050.jpg) no-repeat center bottom;
     background-size:cover;
-    min-width: 100%;
+/*    min-width: 1000px;*/
+    width: 100%;
     min-height: 100%;
     z-index: -100;
     position: absolute;
@@ -123,10 +131,11 @@ input.submintInput:hover{
 
 /*列表页*/
 
-/*背景*/
+/*列表背景*/
 .adminListBg{
     background:url(../images/bg-index.jpg) no-repeat center top;
     background-size:cover;
+    min-width: 1000px;
     width: 100%;
     height: 100%;
     position: absolute;
@@ -141,6 +150,7 @@ input.submintInput:hover{
 .header{
     background:url(../images/bg-title.png) no-repeat 0 0;
     height: 98px;
+    min-width: 1000px;
 }
 .header_r{
     background:url(../images/bg-title.png) no-repeat right -200px;
@@ -154,9 +164,7 @@ input.submintInput:hover{
     text-align: center;
     font-size: 4.2em;
     color: #fff;
-/*    line-height: 2.1em;*/
     line-height: 96px;
-/*    line-height: 9.6em;*/
     -webkit-text-shadow: 0em -0.02em 0em #000000;
     text-shadow: 0em -0.02em 0em #000000;   
 }
@@ -182,10 +190,13 @@ div.add_btn{
     line-height: 2.1428571em;/* 2.8em/60 */
     width: 180px;
     height: 60px;
-/*    margin: 30px 0px 20px 0px;*/
     margin-top: 30px;
     font-size: 2.8em;
-    transition: background-color 0.5s ease;
+    -webkit-transition: background-color 0.4s ease;
+    -mo-transition: background-color 0.4s ease;
+    -ms-transition: background-color 0.4s ease;
+    -o-transition: background-color 0.4s ease;
+    transition: background-color 0.4s ease;
 }
 .add_btn:hover{
     background-color: #129c60;
@@ -196,15 +207,31 @@ div.add_btn{
 .list{
     margin-top: 18px;
 }
-.list li:last-child,{
+.list li{
+    background-color: #fff;
+    height: 50px;
+    color: #000;
+    -webkit-transition: background-color 0.4s ease;
+    -mo-transition: background-color 0.4s ease;
+    -ms-transition: background-color 0.4s ease;
+    -o-transition: background-color 0.4s ease;
+    transition: background-color 0.4s ease;
+    margin-bottom:1px; 
+}
+.list li:nth-child(odd){
+    background-color: #f9f9f9;
+}
+.list li:first-child,.list .first-li{
     -webkit-border-radius: 6px 6px 0px 0px;
     -ms-border-radius: 6px 6px 0px 0px;
     -mo-border-radius: 6px 6px 0px 0px;
     -o-border-radius: 6px 6px 0px 0px;
     border-radius: 6px 6px 0px 0px;
     behavior: url(../js/PIE/PIE.htc);
+    color: #fff;
+    background-color: #0074d2;
 }
-.list li:first-child,{
+.list li:last-child,.list .last-li{
     -webkit-border-radius: 0px 0px 6px 6px;
     -ms-border-radius: 0px 0px 6px 6px;
     -mo-border-radius: 0px 0px 6px 6px;
@@ -212,13 +239,25 @@ div.add_btn{
     border-radius: 0px 0px 6px 6px;
     behavior: url(../js/PIE/PIE.htc);
 }
-
-.list .title{  
-    height: 50px;
-    background-color: #0074d2;
-    color: #fff;
-
+.list li:not(:first-child):hover{
+    background-color: #eee;
 }
+
+.list li samp:last-child a{
+    visibility:hidden;
+/*    opacity: 0;*/
+/*    display: none;*/
+/*    transition: visibility 0.4s ease;*/
+/*    -webkit-transition: opacity 0.4s ease;*/
+/*    transition: opacity 0.4s ease;*/
+}
+
+.list li:not(:first-child):hover samp:last-child a{
+    visibility:visible;
+/*    display: inline-block;*/
+/*    opacity: 1;*/
+}
+
 .list samp{ 
     font-family:Helvetica,Arial,"Microsoft YaHei","微软雅黑",STXihei,"华文细黑",SimSun,"宋体",sans-serif;
     font-size: 1.6em;
@@ -228,11 +267,6 @@ div.add_btn{
 /*    line-height: 50px;*/
     text-align: center;
     line-height: 3.125em; /* 50px/1.6em*/
-}
-.list input{
-    border: 0;
-    background-color:transparent;
-/*    width:100%;*/
 }
 
 .list li samp:nth-child(1),.list samp.note{
@@ -258,4 +292,36 @@ div.add_btn{
 }
 .list li samp:nth-child(8),.list samp.operation{
     width: 20%;
+}
+
+.list input{
+    border: 0;
+    background-color:transparent;
+    width:100%;
+    height: 100%;
+    text-align: center;
+}
+
+.list li samp a{
+    color: #c7c7c7;
+    font-size: 1.5em;
+    line-height: 2.08333333em;
+    height: 100%;
+/*    height: 30px;*/
+    width: 30px;
+/*    margin: auto 5px;*/
+    padding: 0 5px;
+    display: inline-block;
+    -webkit-transition: color 0.5s ease;
+    transition: color 0.5s ease;
+/*    position: relative;*/
+}
+.list li samp a:first-child:hover,.list li samp a.first_a:hover{
+    color: #15ae6b;
+}
+.list li samp a:not(:first-child):hover,.list li samp a.not_first:hover{
+    color: #e71f19;
+}
+.list .not_backups{
+    color: #e71f19;
 }
