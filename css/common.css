@@ -243,19 +243,15 @@ div.add_btn{
     background-color: #eee;
 }
 
-.list li samp:last-child a{
-    visibility:hidden;
-/*    opacity: 0;*/
-/*    display: none;*/
-/*    transition: visibility 0.4s ease;*/
-/*    -webkit-transition: opacity 0.4s ease;*/
-/*    transition: opacity 0.4s ease;*/
+.list li:not(:first-child) samp:last-child {
+    display: none;
 }
 
-.list li:not(:first-child):hover samp:last-child a{
-    visibility:visible;
-/*    display: inline-block;*/
-/*    opacity: 1;*/
+.list li:not(:first-child):hover samp:last-child{
+    display: inline-block;
+}
+.list li samp a.none{
+    display: none;
 }
 
 .list samp{ 
@@ -297,31 +293,60 @@ div.add_btn{
 .list input{
     border: 0;
     background-color:transparent;
-    width:100%;
-    height: 100%;
+    width:90%;
+    height: 80%;
+    line-height: 2.5em;
     text-align: center;
 }
+.list input.edit_input{
+    background-color: #fff;
+    
+    border: 1px solid #CCC;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+
+}
+.list input.edit_input:focus{
+    border-color: rgba(82, 168, 236, 0.8);
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+    -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+    outline: 0;
+    outline: thin dotted \9;
+}
+
+.list input.error_input{
+    border-color: #953B39;
+    -webkit-box-shadow: 0 0 6px #D59392;
+    -moz-box-shadow: 0 0 6px #d59392;
+    box-shadow: 0 0 6px #D59392;
+}
+
+
 
 .list li samp a{
     color: #c7c7c7;
     font-size: 1.5em;
     line-height: 2.08333333em;
     height: 100%;
-/*    height: 30px;*/
     width: 30px;
-/*    margin: auto 5px;*/
     padding: 0 5px;
     display: inline-block;
     -webkit-transition: color 0.5s ease;
     transition: color 0.5s ease;
-/*    position: relative;*/
+    
+/*    background-color: red;*/
+/*    font-family: 'icon';*/
+
 }
-.list li samp a:first-child:hover,.list li samp a.first_a:hover{
+.list li samp a.colck_green:hover{
     color: #15ae6b;
 }
-.list li samp a:not(:first-child):hover,.list li samp a.not_first:hover{
+.list li samp a.colck_red:hover,.list .not_backups{
     color: #e71f19;
 }
+/*
 .list .not_backups{
     color: #e71f19;
 }
+*/

@@ -123,22 +123,35 @@ function loginAjax(){
 /* @end **/
 
 /**
-* @name		:
+* @name		:listEdit
 * @author	:si
 * @relating	:jQuery
-* @dependent:
+* @dependent:列表编辑
 */
 function listEdit(el){
     var pN=el.parentNode;
-//    consoleDebug(parent);
-//    pSN=get_previousSibling(pN);
     var $pAll= $(pN).prevAll();
     var $allInput =$pAll.children("input");
-    
-    console.log($allInput);
+    $allInput.prop("readonly", false);
+    $allInput.addClass("edit_input"); 
+    $(el).addClass('none');    
+    $(el).next().removeClass('none');
+//    console.log();
     
 }
 /* @end **/
+
+/**
+* @name		:listSave
+* @author	:si
+* @relating	:jQuery
+* @dependent:列表保存
+*/
+function listSave(el){
+    console.log(el);
+}
+/* @end **/
+
 
 
 

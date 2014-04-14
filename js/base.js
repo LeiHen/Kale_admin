@@ -21,7 +21,7 @@ GLOBAL.namespace=function(str){
 * @author	:si
 * @dependent:获得当前节点的上一个兄弟（除空节点）
 */
-function get_previousSibling(node) {
+function getPreviousSibling(node) {
     var x=node.previousSibling;
     while (x.nodeType!=1){
         x=x.previousSibling;
@@ -35,7 +35,7 @@ function get_previousSibling(node) {
 * @author	:si
 * @dependent:获得当前节点的下一个兄弟（除空节点）
 */
-function get_nextSibling(node){
+function getNextSibling(node){
     var y=node.nextSibling;
     while (y.nodeType!=1){
         y=y.nextSibling;
