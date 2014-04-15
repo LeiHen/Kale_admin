@@ -129,14 +129,15 @@ function loginAjax(){
 * @dependent:列表编辑
 */
 function listEdit(el){
-    var pN=el.parentNode;
-    var $pAll= $(pN).prevAll();
-    var $allInput =$pAll.children("input");
+    var $pAll=$(el).parent().prevAll();
+    var $allInput =$pAll.children("input:gt(0)");
+    console.log($allInput);
+    
     $allInput.prop("readonly", false);
-    $allInput.addClass("edit_input"); 
+    $allInput.addClass("edit_input");
     $(el).addClass('none');    
     $(el).next().removeClass('none');
-//    console.log();
+//    console.log($allInput);
     
 }
 /* @end **/
@@ -148,13 +149,56 @@ function listEdit(el){
 * @dependent:列表保存
 */
 function listSave(el){
-    console.log(el);
+    var $pAll=$(el).parent().prevAll();
+    var $allInput =$pAll.children("input:gt(0)");
+    
+    $allInput.prop("readonly", true);
+    $allInput.removeClass("edit_input"); 
+    $(el).addClass('none');    
+    $(el).prev().removeClass('none');
+
+    console.log($allInput);
 }
 /* @end **/
 
 
+/**
+* @name		:listDel
+* @author	:si
+* @relating	:jQuery
+* @dependent:列表删除
+*/
+function listDel(el){
+    var $pAll=$(el).parent().prevAll();
+    var $allInput =$pAll.children("input");
+    
+    $allInput.prop("readonly", true);
+    $allInput.removeClass("edit_input"); 
+    $(el).addClass('none');    
+    $(el).prev().removeClass('none');
 
+//    console.log(el);
+}
+/* @end **/
 
+/**
+* @name		:listDel
+* @author	:si
+* @relating	:jQuery
+* @dependent:列表检验格式
+*/
+function listDel(el){
+    var $pAll=$(el).parent().prevAll();
+    var $allInput =$pAll.children("input");
+    
+    $allInput.prop("readonly", true);
+    $allInput.removeClass("edit_input"); 
+    $(el).addClass('none');    
+    $(el).prev().removeClass('none');
+
+//    console.log(el);
+}
+/* @end **/
 
 
 

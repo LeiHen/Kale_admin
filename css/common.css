@@ -221,7 +221,8 @@ div.add_btn{
 .list li:nth-child(odd){
     background-color: #f9f9f9;
 }
-.list li:first-child,.list .first-li{
+
+.list li:first-child{
     -webkit-border-radius: 6px 6px 0px 0px;
     -ms-border-radius: 6px 6px 0px 0px;
     -mo-border-radius: 6px 6px 0px 0px;
@@ -231,7 +232,8 @@ div.add_btn{
     color: #fff;
     background-color: #0074d2;
 }
-.list li:last-child,.list .last-li{
+
+.list li:last-child{
     -webkit-border-radius: 0px 0px 6px 6px;
     -ms-border-radius: 0px 0px 6px 6px;
     -mo-border-radius: 0px 0px 6px 6px;
@@ -239,7 +241,7 @@ div.add_btn{
     border-radius: 0px 0px 6px 6px;
     behavior: url(../js/PIE/PIE.htc);
 }
-.list li:not(:first-child):hover{
+.list li:not(:first-child):hover,{
     background-color: #eee;
 }
 
@@ -265,30 +267,96 @@ div.add_btn{
     line-height: 3.125em; /* 50px/1.6em*/
 }
 
-.list li samp:nth-child(1),.list samp.note{
+
+.list li samp:nth-child(1){
     width: 11%;
 }
-.list li samp:nth-child(2),.list samp.user{
+.list li samp:nth-child(2){
     width: 15%;
 }
-.list li samp:nth-child(3),.list samp.psd{
+.list li samp:nth-child(3){
     width: 15%;
 }
-.list li samp:nth-child(4),.list samp.ip{
+.list li samp:nth-child(4){
     width: 14%;
 }
-.list li samp:nth-child(5),.list samp.port{
+.list li samp:nth-child(5){
     width: 7%;
 }
-.list li samp:nth-child(6),.list samp.expiration_time{
+.list li samp:nth-child(6){
     width: 11%;
 }
-.list li samp:nth-child(7),.list samp.backups{
+.list li samp:nth-child(7){
     width: 7%;
 }
-.list li samp:nth-child(8),.list samp.operation{
+.list li samp:nth-child(8){
     width: 20%;
 }
+
+/* hack let IE8*/
+
+.list li.li_nthchild_odd{
+    background-color: #f9f9f9;
+}
+
+.list li.first_li{
+    -webkit-border-radius: 6px 6px 0px 0px;
+    -ms-border-radius: 6px 6px 0px 0px;
+    -mo-border-radius: 6px 6px 0px 0px;
+    -o-border-radius: 6px 6px 0px 0px;
+    border-radius: 6px 6px 0px 0px;
+    behavior: url(../js/PIE/PIE.htc);
+    color: #fff;
+    background-color: #0074d2;
+}
+.list li.last_li{
+    -webkit-border-radius: 0px 0px 6px 6px;
+    -ms-border-radius: 0px 0px 6px 6px;
+    -mo-border-radius: 0px 0px 6px 6px;
+    -o-border-radius: 0px 0px 6px 6px;
+    border-radius: 0px 0px 6px 6px;
+    behavior: url(../js/PIE/PIE.htc);
+}
+
+.list li.li_hover{
+    background-color: #eee;
+}
+
+.list li samp.last_samp {
+    display: none;
+}
+
+.list li:not(:first-child):hover samp:last-child{
+    display: inline-block;
+}
+
+.list li samp.note{
+    width: 11%;
+}
+.list samp.user{
+    width: 15%;
+}
+.list samp.psd{
+    width: 15%;
+}
+.list samp.ip{
+    width: 14%;
+}
+.list samp.port{
+    width: 7%;
+}
+.list samp.expiration_time{
+    width: 11%;
+}
+.list samp.backups{
+    width: 7%;
+}
+.list samp.operation{
+    width: 20%;
+}
+/* END hack lte IE8 */
+
+
 
 .list input{
     border: 0;
@@ -350,3 +418,35 @@ div.add_btn{
     color: #e71f19;
 }
 */
+
+/*返回顶部*/
+p#back-to-top {
+    position: fixed;
+    _position:absolute;
+    bottom: 25px;
+    right: 20px; 
+    display: none;
+}
+p#back-to-top a {
+    display: block;
+    width: 50px;
+}
+
+p#back-to-top a span {
+    border-radius: 6px;
+    display: block;
+    height: 50px;
+    width: 50px;
+    -moz-transition: background 1s;
+    -webkit-transition: background 1s;
+    -o-transition: background 1s;
+    -ms-transition: background 1s;
+    transition: background 1s;
+    background: #cacaca url(../images/arrow-up.png) no-repeat center center;
+    opacity: 0.8;
+    behavior: url(../common/js/PIE/PIE.htc);
+    position:relative\9;
+}
+#back-to-top a:hover span {
+    background: #3a831b url(../images/arrow-up.png) no-repeat center center;
+}
