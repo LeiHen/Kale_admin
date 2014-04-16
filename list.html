@@ -48,7 +48,7 @@
             
             <ul class="list">
                 <li>
-                    <samp class="note">备注</samp>
+                    <samp>备注</samp>
                     <samp>账号</samp>
                     <samp>密码</samp>
                     <samp>IP</samp>
@@ -60,11 +60,11 @@
                 
                 <li >
                     <samp><input type="text" value="刘强东" readonly="readonly"  ></samp>
-                    <samp><input type="text" value="liuqiangdong" readonly="readonly" ></samp>
-                    <samp><input type="text" value="132456789" readonly="readonly" ></samp>
-                    <samp><input type="text" value="192.168.100.100" readonly="readonly" ></samp>
+                    <samp><input type="text" value="liuqiangdong" readonly="readonly" class="validate[required,minSize[6]]" ></samp>
+                    <samp><input type="text" value="132456789" readonly="readonly" class="validate[required,minSize[6]]" ></samp>
+                    <samp><input type="text" value="192.168.100.100" readonly="readonly" class="validate[required,custom[ipv4]]" ></samp>
                     <samp><input type="text" value="8000" readonly="readonly"  ></samp>
-                    <samp><input type="text" value="2011-12-01" readonly="readonly" class="validate[required,custom[date]] text-input"></samp>
+                    <samp><input type="text" value="2011-12-01" readonly="readonly" class="validate[required,custom[date]]"></samp>
                     <samp><input type="text" value="有" readonly="readonly" ></samp>
                     <samp class="operat">
                         <a class="icon-edit colck_green" title="编辑" onclick="listEdit(this)"></a>
@@ -140,6 +140,7 @@
 
                 //返回顶部
 //                toTop();
+                
                 jQuery(".list li").validationEngine('attach');
                 
 			}

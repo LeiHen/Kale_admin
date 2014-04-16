@@ -265,6 +265,7 @@ div.add_btn{
 /*    line-height: 50px;*/
     text-align: center;
     line-height: 3.125em; /* 50px/1.6em*/
+/*    line-height: 1em\0/;*/
 }
 
 
@@ -368,14 +369,15 @@ div.add_btn{
 }
 .list input.edit_input{
     background-color: #fff;
-    
     border: 1px solid #CCC;
     -webkit-border-radius: 3px;
     border-radius: 3px;
+    
+    transition: box-shadow 0.4s ease;
 
 }
 .list input.edit_input:focus{
-    border-color: rgba(82, 168, 236, 0.8);
+    border-color: rgb(82, 168, 236);
     -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
     -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
