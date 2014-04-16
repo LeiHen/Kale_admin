@@ -130,13 +130,24 @@ function loginAjax(){
 */
 function listEdit(el){
     var $pAll=$(el).parent().prevAll();
-    var $allInput =$pAll.children("input:gt(0)");
-    console.log($allInput);
+    var $allInput = $pAll.children("input:gt(0)");
+    var $date = $pAll.children("input:eq(1)");
+//    console.log($allInput);
     
     $allInput.prop("readonly", false);
     $allInput.addClass("edit_input");
     $(el).addClass('none');    
     $(el).next().removeClass('none');
+    
+    //调用 日历
+    $date.datepicker({
+        inline: true,
+        dateFormat: "yy-mm-dd",
+//        changeMonth: true,
+//        changeYear:true,
+//        selectOtherMonths: true
+    });
+    
 //    console.log($allInput);
     
 }

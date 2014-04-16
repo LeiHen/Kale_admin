@@ -7,8 +7,9 @@
 		<link rel="stylesheet" href="css/common.css">
 		<link rel="stylesheet" href="css/font.css">
 
-		<link rel="stylesheet" href="css/validationEngine.css"> 
-		
+		<link rel="stylesheet" href="css/validationEngine.css">
+		<link rel="stylesheet" href="css/jquery-ui-calendar-1.10.4.css"> 
+        
         <!--[if lt ie 8]>
            
         <![endif]-->
@@ -63,7 +64,7 @@
                     <samp><input type="text" value="liuqiangdong" readonly="readonly" class="validate[required,minSize[6]]" ></samp>
                     <samp><input type="text" value="132456789" readonly="readonly" class="validate[required,minSize[6]]" ></samp>
                     <samp><input type="text" value="192.168.100.100" readonly="readonly" class="validate[required,custom[ipv4]]" ></samp>
-                    <samp><input type="text" value="8000" readonly="readonly"  ></samp>
+                    <samp><input type="text" value="8000" readonly="readonly" class="validate[required]"  ></samp>
                     <samp><input type="text" value="2011-12-01" readonly="readonly" class="validate[required,custom[date]]"></samp>
                     <samp><input type="text" value="有" readonly="readonly" ></samp>
                     <samp class="operat">
@@ -122,13 +123,19 @@
         
         
 <!--        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>-->
-<!--        <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>-->
-        <script src="js/jquery-1.9.1.min.js"></script>
+        <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+<!--        <script src="js/jquery-1.9.1.min.js"></script>-->
+		
+		
+		
 		<script src="js/base.js"></script>
 		<script src="js/common.js"></script>
 		
+		
 		<script src="js/validation/validationEngine-zh_CN.js"></script>
 		<script src="js/validation/validationEngine.js"></script>
+		<script src="js/jquery-ui/calendar.min.js"></script>
+		
 		
 		<!--[if lte ie 8]>
             <script src="js/hack-ie-common.js"></script>
@@ -140,8 +147,11 @@
 
                 //返回顶部
 //                toTop();
-                
+                //表单验证
                 jQuery(".list li").validationEngine('attach');
+                
+                
+            
                 
 			}
 			init();
