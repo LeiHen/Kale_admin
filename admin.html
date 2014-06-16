@@ -1,43 +1,45 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<title>卡乐后台</title>	
-		<link rel="stylesheet" href="css/base.css">
-		<link rel="stylesheet" href="css/common.css">       
-	</head>
-	<body>
-		<div class="adminLoginBg"></div>
-		<div class="login">
-		    <input id="userInput" class="userInput" type="text" value="账号">   
-		    <input id="passwordInput" class="passwordInput none" type="password" value="">
-		    <input id="passwordText" class="passwordText" type="text" value="密码" tabindex="">
-		    <input id="loginHint" class="loginHint hidden" type="text" readonly="readonly" value="账号或密码错误">
-		    <input id="submitBtn" class="submintInput" type="submit" value="登    陆" >
-		</div>
-        
-        
-<!--        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>-->
-        <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
-		<script src="js/base.js"></script>
-		<script src="js/common.js"></script>
-		<script type="text/javascript">	
-			//初始化 统一入口
-			function init(){
-                //登陆表单清空
-                inputEmpty("userInput","账号");
-                inputEmpty("passwordText","密码");
-                //密码框提示
-                passwordHint();
-                //Enter绑定提交按钮
-                btnBindEnter("submitBtn");
-                //登陆ajax验证
-//                loginAjax();
-			}
-			init();
-		</script>
-		
-        <!--[if lt IE 9]>
+
+<head>
+    <meta charset="utf-8">
+    <title>卡乐后台</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/common.css">
+</head>
+
+<body>
+    <div class="adminLoginBg"></div>
+    <div class="login">
+        <input id="userInput" class="userInput" type="text" value="账号">
+        <input id="passwordInput" class="passwordInput none" type="password" value="">
+        <input id="passwordText" class="passwordText" type="text" value="密码" tabindex="">
+        <input id="loginHint" class="loginHint hidden" type="text" readonly="readonly" value="账号或密码错误">
+        <input id="submitBtn" class="submintInput" type="submit" value="登    陆" onclick="window.location.href='list.html';">
+    </div>
+
+
+    <!--        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>-->
+    <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+    <script src="js/base.js"></script>
+    <script src="js/common.js"></script>
+    <script type="text/javascript">
+        //初始化 统一入口
+        function init() {
+            //登陆表单清空
+            inputEmpty("userInput", "账号");
+            inputEmpty("passwordText", "密码");
+            //密码框提示
+            passwordHint();
+            //Enter绑定提交按钮
+            btnBindEnter("submitBtn");
+            //登陆ajax验证
+            //                loginAjax();
+        }
+        init();
+    </script>
+
+    <!--[if lt IE 9]>
         <script type="text/javascript" src="js/PIE/PIE.js"></script>
         <script type="text/javascript">
             $(function() {
@@ -49,5 +51,6 @@
             });
         </script>
         <![endif]-->
-	</body>
+</body>
+
 </html>

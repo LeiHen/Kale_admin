@@ -42,6 +42,7 @@ a:hover{text-decoration:none;cursor:pointer}
 .fr{float:right}
 .pr{position:relative}
 .pa{position:absolute}
+.pf{position:fixed}
 .zoom{zoom:1}
 .hidden{visibility:hidden}
 .visible{visibility:visible}
